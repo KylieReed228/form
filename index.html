@@ -12,43 +12,55 @@
 </head>
 <body>
     <div class="container">
-        <div class="payment-number">
-            <div class="payment-number__wrapper">
-                <img src="./img/logo.png" alt="logo">
-                <p class="payment-number__text">Payment No.327400730</p>
-                <div class="payment-number__amount">
-                    <p>Сумма</p>
-                    <p>123.95 <span>грн</span></p>
+            <div class="payment-number">
+                <div class="payment-number__wrapper">
+                    <img src="./img/logo.png" alt="logo">
+                    <p class="payment-number__text">Payment No.327400730</p>
+                    <div class="payment-number__amount">
+                        <p>Сумма</p>
+                        <p>123.95 <span>грн</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="payment-block">
+                <form action="" class="payment-form">
+                    <div class="payment-form__wrapper">
+                        <div class="payment-form__card-number">
+                            <label for="card-number">Номер карты</label>
+                                <div>
+                                    <input name="card-number" type="number" placeholder="0000 0000 0000 0000">
+                                    <img src="img/card-number.svg" alt="card-number">
+                                </div>
+                        </div>
+                        <div class="payment-form__block">
+                            <div class="payment-form__card-period">
+                                <label for="card-period">Срок действия</label>
+                                <input name="card-period" type="number" placeholder="ММ/ГГ">
+                            </div>
+                            <div class="payment-form__card-code" >
+                                <label for="card-code">CVV2/CVC2</label>
+                                <div>
+                                    <input name="card-code" type="password" placeholder="&bull;&bull;&bull;">
+                                    <img src="img/card-code.svg" alt="card-code">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="payment-form__btn">Оплатить 123.95 грн</button>
+                    </div>
+                </form>
+                <div class="payment-sistems">
+                    <img class="payment-sistems__visa" src="img/visa.svg" alt="visa">
+                    <img class="payment-sistems__mastercard" src="img/mastercard.svg" alt="mastercard">
+                    <img class="payment-sistems__union" src="img/union-pay.svg" alt="union-pay">
+                    <img class="payment-sistems__prostir" src="img/prostir.jpg" alt="prostir">
+                    <img class="payment-sistems__pci" src="img/pci.svg" alt="pci">
+                    <select name="" id="" class="payment-sistems__language">
+                        <option value="">RU</option>
+                        <option value="">EN</option>
+                        <option value="">UK</option>
+                    </select>
                 </div>
             </div>
         </div>
-        <form action="" class="payment-form">
-            <div class="payment-form__wrapper">
-                <div class="payment-form__card-number">
-                    <label for="card-number">Номер карты<input name="card-number" type="number" placeholder="0000 0000 0000 0000"><img src="img/card-number.svg" alt="card"></label>
-                </div>
-                <div class="payment-form__block">
-                    <div class="payment-form__card-period">
-                        <label for="card-period">Срок действия<input name="card-period" type="number" placeholder="ММ/ГГ"><img src="" alt=""></label>
-                    </div>
-                    <div class="payment-form__card-code" >
-                        <label for="card-code">CVV2/CVC2<input name="card-code" type="password" placeholder="&bull;&bull;&bull;"><img src="img/card-code.svg" alt=""></label>
-                    </div>
-                </div>
-                <button class="payment-form__btn">Оплатить 123.95 грн</button>
-            </div>
-            <div class="payment-form__sistems">
-                <img class="payment-form__sistems-visa" src="img/visa.svg" alt="visa">
-                <img class="payment-form__sistems-mastercard" src="img/mastercard.svg" alt="mastercard">
-                <img class="payment-form__sistems-union" src="img/union-pay.svg" alt="union-pay">
-                <img class="payment-form__sistems-prostir" src="img/prostir.jpg" alt="prostir">
-                <img class="payment-form__sistems-pci" src="img/pci.svg" alt="pci">
-                <div class="payment-form__language">
-                    <p>RU</p>
-                    <img src="img/arrow.svg" alt="arrow">
-                </div>
-            </div>
-        </form>
-    </div>
 </body>
 </html>

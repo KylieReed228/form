@@ -72,15 +72,35 @@ body {
 }
 
 .container {
+  width: 915px;
+  margin: 0 auto;
+  margin-top: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 915px;
-  margin: 0 auto;
-  margin-top: 120px;
+}
+
+@media (max-width: 960px) {
+  .container {
+    width: 720px;
+    margin: 0 auto;
+    margin-top: 120px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: 540px;
+    margin: 0 auto;
+    margin-top: 120px;
+  }
 }
 
 .payment-number {
@@ -126,32 +146,53 @@ body {
   font-weight: 400;
 }
 
+@media (max-width: 900px) {
+  .payment-number {
+    margin-left: 15px;
+    width: 374px;
+  }
+}
+
 .payment-form {
   width: 450px;
   -webkit-box-shadow: 0 0 23px 21px whitesmoke;
           box-shadow: 0 0 23px 21px whitesmoke;
-  position: relative;
 }
 
 .payment-form__wrapper {
   padding: 50px 60px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .payment-form__wrapper {
+    padding: 50px 25px;
+  }
 }
 
 .payment-form__card-number {
   margin-bottom: 20px;
   color: #a8a8a8;
+}
+
+.payment-form__card-number div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
 }
 
 .payment-form__card-number label {
-  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
 }
 
 .payment-form__card-number input {
   width: 330px;
   height: 40px;
-  margin-top: 15px;
-  padding: 15px;
+  padding: 10px 15px;
   border-radius: 5px;
   border: 1px solid #a8a8a8;
   outline: none;
@@ -161,7 +202,9 @@ body {
   width: 25px;
   height: 22px;
   position: absolute;
-  bottom: 7px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
   right: 15px;
 }
 
@@ -177,42 +220,52 @@ body {
   margin-right: 35px;
 }
 
+.payment-form__card-period label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+
 .payment-form__card-period input {
   width: 147px;
   height: 40px;
-  margin-top: 15px;
-  padding: 15px;
+  padding: 10px 15px;
   border-radius: 5px;
   border: 1px solid #a8a8a8;
   outline: none;
 }
 
-.payment-form__card-code {
+.payment-form__card-code div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
+}
+
+.payment-form__card-code label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
 }
 
 .payment-form__card-code input {
   width: 147px;
   height: 40px;
-  padding: 15px;
-  margin-top: 15px;
+  padding: 10px 15px;
   border-radius: 5px;
   border: 1px solid #a8a8a8;
   outline: none;
-  position: relative;
-}
-
-.payment-form__card-code input::after {
-  content: '\f141';
-  top: 0;
-  left: 0;
 }
 
 .payment-form__card-code img {
   width: 25px;
   height: 24px;
   position: absolute;
-  bottom: 7px;
+  top: 0;
+  bottom: 0px;
+  margin: auto 0;
   right: 15px;
 }
 
@@ -226,9 +279,15 @@ body {
   cursor: pointer;
 }
 
-.payment-form__sistems {
-  position: absolute;
-  bottom: -45px;
+@media (max-width: 900px) {
+  .payment-form {
+    margin-left: 15px;
+    width: 374px;
+  }
+}
+
+.payment-sistems {
+  margin-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -237,48 +296,49 @@ body {
           align-items: center;
 }
 
-.payment-form__sistems-visa {
-  width: 35px;
-  margin-right: 10px;
+.payment-sistems__visa {
+  width: 40px;
+  margin-right: 13px;
 }
 
-.payment-form__sistems-mastercard {
-  width: 35px;
-  margin-right: 10px;
+.payment-sistems__mastercard {
+  width: 40px;
+  margin-right: 13px;
 }
 
-.payment-form__sistems-union {
-  width: 35px;
-  margin-right: 10px;
+.payment-sistems__union {
+  width: 40px;
+  margin-right: 13px;
 }
 
-.payment-form__sistems-prostir {
+.payment-sistems__prostir {
   width: 51px;
   height: 12px;
-  margin-right: 10px;
+  margin-right: 13px;
 }
 
-.payment-form__sistems-pci {
-  width: 35px;
-  margin-right: 165px;
+.payment-sistems__pci {
+  width: 40px;
+  margin-right: 120px;
 }
 
-.payment-form__language {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
+@media (max-width: 900px) {
+  .payment-sistems__pci {
+    margin-right: 60px;
+  }
 }
 
-.payment-form__language p {
+.payment-sistems__language {
   color: #a8a8a8;
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
-.payment-form__language img {
-  width: 18px;
-  height: 9px;
+@media (max-width: 900px) {
+  .payment-sistems {
+    margin-left: 15px;
+    margin-bottom: 30px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

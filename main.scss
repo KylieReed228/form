@@ -6,11 +6,23 @@ body {
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
     width: 915px;
     margin: 0 auto;
     margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 960px) {
+        width: 720px;
+        margin: 0 auto;
+        margin-top: 120px;
+        flex-direction: column-reverse;
+    }
+    @media (max-width: 720px) {
+        width: 540px;
+        margin: 0 auto;
+        margin-top: 120px;
+        
+    }
 }
 
 .payment-number {
@@ -41,27 +53,37 @@ body {
             font-weight: 400;
         }
     }
+    @media (max-width: 900px) {
+        margin-left: 15px;
+        width: 374px;
+      }
 }
 
 .payment-form {
     width: 450px;
     box-shadow: 0 0 23px 21px rgba(245, 245, 245, 1);
-    position: relative;
     &__wrapper {
         padding: 50px 60px;
+        margin-bottom: 10px;
+        @media (max-width: 900px) {
+            padding: 50px 25px;
+          }
     }
     &__card-number {
         margin-bottom: 20px;
         color: #a8a8a8;
-        position: relative;
+        & div {
+            display: flex;
+            position: relative;
+        }
         & label {
-            width: 100px;
+            display: flex;
+            margin-bottom: 15px;
         }
         & input {
             width: 330px;
             height: 40px;
-            margin-top: 15px;
-            padding: 15px;
+            padding: 10px 15px;
             border-radius: 5px;
             border: 1px solid #a8a8a8;
             outline: none;
@@ -70,7 +92,9 @@ body {
             width: 25px;
             height: 22px;
             position: absolute;
-            bottom: 7px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
             right: 15px;
         }
     }
@@ -81,38 +105,43 @@ body {
     }
     &__card-period {
         margin-right: 35px;
+        & label {
+            display: flex;
+            margin-bottom: 15px;
+        }
         & input {
             width: 147px;
             height: 40px;
-            margin-top: 15px;
-            padding: 15px;
+            padding: 10px 15px;
             border-radius: 5px;
             border: 1px solid #a8a8a8;
             outline: none;
         }
     }
     &__card-code {
-        position: relative;
+        & div {
+            display: flex;
+            position: relative;
+        }
+        & label {
+            display: flex;
+            margin-bottom: 15px;
+        }
         & input {
             width: 147px;
             height: 40px;
-            padding: 15px;
-            margin-top: 15px;
+            padding: 10px 15px;
             border-radius: 5px;
             border: 1px solid #a8a8a8;
             outline: none;
-            position: relative;
-            &::after {
-                content: '\f141';
-                top: 0;
-                left: 0;
-            }
         }
         & img {
             width: 25px;
             height: 24px;
             position: absolute;
-            bottom: 7px;
+            top: 0;
+            bottom: 0px;
+            margin: auto 0;
             right: 15px;
         }
     }
@@ -125,43 +154,48 @@ body {
         border-radius: 5px;
         cursor: pointer;
     }
-    &__sistems {
-        position: absolute;
-        bottom: -45px;
-        display: flex;
-        align-items: center;
-        &-visa {
-            width: 35px;
-            margin-right: 10px;
-        }
-        &-mastercard {
-            width: 35px;
-            margin-right: 10px;
-        }
-        &-union {
-            width: 35px;
-            margin-right: 10px;
-        }
-        &-prostir {
-            width: 51px;
-            height: 12px;
-            margin-right: 10px;
-        }
-        &-pci {
-            width: 35px;
-            margin-right: 165px;
-        }
+    @media (max-width: 900px) {
+        margin-left: 15px;
+        width: 374px;
+      }
+}
+
+.payment-sistems {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    &__visa {
+        width: 40px;
+        margin-right: 13px;
+    }
+    &__mastercard {
+        width: 40px;
+        margin-right: 13px;
+    }
+    &__union {
+        width: 40px;
+        margin-right: 13px;
+    }
+    &__prostir {
+        width: 51px;
+        height: 12px;
+        margin-right: 13px;
+    }
+    &__pci {
+        width: 40px;
+        margin-right: 120px;
+        @media (max-width: 900px) {
+            margin-right: 60px;
+          }
     }
     &__language {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        & p {
-            color: #a8a8a8;
-        }
-        & img {
-            width: 18px;
-            height: 9px;
-        }
+        color: #a8a8a8;
+        background: transparent;
+        border: none;
+        outline: none;
     }
+    @media (max-width: 900px) {
+        margin-left: 15px;
+        margin-bottom: 30px;
+      }
 }
