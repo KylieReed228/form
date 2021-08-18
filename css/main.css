@@ -1,0 +1,284 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 915px;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+
+.payment-number {
+  width: 430px;
+  height: 200px;
+  -webkit-box-shadow: 0 0 23px 21px whitesmoke;
+          box-shadow: 0 0 23px 21px whitesmoke;
+}
+
+.payment-number__wrapper {
+  padding: 25px 20px;
+}
+
+.payment-number__wrapper img {
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.payment-number__text {
+  margin-bottom: 20px;
+  color: #757575;
+}
+
+.payment-number__amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.payment-number__amount p {
+  font-weight: 700;
+}
+
+.payment-number__amount span {
+  font-weight: 400;
+}
+
+.payment-form {
+  width: 450px;
+  -webkit-box-shadow: 0 0 23px 21px whitesmoke;
+          box-shadow: 0 0 23px 21px whitesmoke;
+  position: relative;
+}
+
+.payment-form__wrapper {
+  padding: 50px 60px;
+}
+
+.payment-form__card-number {
+  margin-bottom: 20px;
+  color: #a8a8a8;
+  position: relative;
+}
+
+.payment-form__card-number label {
+  width: 100px;
+}
+
+.payment-form__card-number input {
+  width: 330px;
+  height: 40px;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #a8a8a8;
+  outline: none;
+}
+
+.payment-form__card-number img {
+  width: 25px;
+  height: 22px;
+  position: absolute;
+  bottom: 7px;
+  right: 15px;
+}
+
+.payment-form__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 35px;
+  color: #a8a8a8;
+}
+
+.payment-form__card-period {
+  margin-right: 35px;
+}
+
+.payment-form__card-period input {
+  width: 147px;
+  height: 40px;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #a8a8a8;
+  outline: none;
+}
+
+.payment-form__card-code {
+  position: relative;
+}
+
+.payment-form__card-code input {
+  width: 147px;
+  height: 40px;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: 1px solid #a8a8a8;
+  outline: none;
+  position: relative;
+}
+
+.payment-form__card-code input::after {
+  content: '\f141';
+  top: 0;
+  left: 0;
+}
+
+.payment-form__card-code img {
+  width: 25px;
+  height: 24px;
+  position: absolute;
+  bottom: 7px;
+  right: 15px;
+}
+
+.payment-form__btn {
+  width: 330px;
+  height: 40px;
+  background: #4384d0;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-form__sistems {
+  position: absolute;
+  bottom: -45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.payment-form__sistems-visa {
+  width: 35px;
+  margin-right: 10px;
+}
+
+.payment-form__sistems-mastercard {
+  width: 35px;
+  margin-right: 10px;
+}
+
+.payment-form__sistems-union {
+  width: 35px;
+  margin-right: 10px;
+}
+
+.payment-form__sistems-prostir {
+  width: 51px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.payment-form__sistems-pci {
+  width: 35px;
+  margin-right: 165px;
+}
+
+.payment-form__language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.payment-form__language p {
+  color: #a8a8a8;
+}
+
+.payment-form__language img {
+  width: 18px;
+  height: 9px;
+}
+/*# sourceMappingURL=main.css.map */

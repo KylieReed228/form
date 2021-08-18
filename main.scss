@@ -1,0 +1,167 @@
+@import "reset.scss";
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 915px;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+
+.payment-number {
+    width: 430px;
+    height: 200px;
+    box-shadow: 0 0 23px 21px rgba(245, 245, 245, 1);
+    &__wrapper {
+        padding: 25px 20px;
+        & img {
+            width: 150px;
+            height: auto;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+    }
+    &__text {
+        margin-bottom: 20px;
+        color: #757575;
+    }
+    &__amount {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & p {
+            font-weight: 700;
+            }
+        & span {
+            font-weight: 400;
+        }
+    }
+}
+
+.payment-form {
+    width: 450px;
+    box-shadow: 0 0 23px 21px rgba(245, 245, 245, 1);
+    position: relative;
+    &__wrapper {
+        padding: 50px 60px;
+    }
+    &__card-number {
+        margin-bottom: 20px;
+        color: #a8a8a8;
+        position: relative;
+        & label {
+            width: 100px;
+        }
+        & input {
+            width: 330px;
+            height: 40px;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #a8a8a8;
+            outline: none;
+        }
+        & img {
+            width: 25px;
+            height: 22px;
+            position: absolute;
+            bottom: 7px;
+            right: 15px;
+        }
+    }
+    &__block {
+       display: flex;
+       margin-bottom: 35px;
+       color: #a8a8a8;
+    }
+    &__card-period {
+        margin-right: 35px;
+        & input {
+            width: 147px;
+            height: 40px;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #a8a8a8;
+            outline: none;
+        }
+    }
+    &__card-code {
+        position: relative;
+        & input {
+            width: 147px;
+            height: 40px;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+            border: 1px solid #a8a8a8;
+            outline: none;
+            position: relative;
+            &::after {
+                content: '\f141';
+                top: 0;
+                left: 0;
+            }
+        }
+        & img {
+            width: 25px;
+            height: 24px;
+            position: absolute;
+            bottom: 7px;
+            right: 15px;
+        }
+    }
+    &__btn {
+        width: 330px;
+        height: 40px;
+        background: #4384d0;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    &__sistems {
+        position: absolute;
+        bottom: -45px;
+        display: flex;
+        align-items: center;
+        &-visa {
+            width: 35px;
+            margin-right: 10px;
+        }
+        &-mastercard {
+            width: 35px;
+            margin-right: 10px;
+        }
+        &-union {
+            width: 35px;
+            margin-right: 10px;
+        }
+        &-prostir {
+            width: 51px;
+            height: 12px;
+            margin-right: 10px;
+        }
+        &-pci {
+            width: 35px;
+            margin-right: 165px;
+        }
+    }
+    &__language {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        & p {
+            color: #a8a8a8;
+        }
+        & img {
+            width: 18px;
+            height: 9px;
+        }
+    }
+}
